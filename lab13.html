@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function elm(a, b) {
+      if (b === 0) {
+        return [a, 1, 0];
+      } else {
+        var [d, x, y] = elm(b, a % b);
+        return [d, y, x - y * Math.floor(a / b)];
+      }
+    }
+    
+    function Inverse(a, m) {
+      a = ((a % m) + m) % m;
+      var [gcd, x, y] = elm(a, m);
+      if (gcd !== 1) {
+        throw new Error('Обратный элемент не существует');
+      } else {
+        return (x % m + m) % m;
+      }
+    }
+    
+    var a = 7;
+    var c = 11;
+    
+    document.write("Обратное число для ", a, " по модулю ", c, " равно ", Inverse(a, c));
+    </script>
+</body>
+</html>
