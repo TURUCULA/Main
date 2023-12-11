@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function Car(cName, cYear, cValue) {
+      this.name = cName;
+      this.year = cYear;
+      this.value = cValue;
+      this.GetInfoCar = function () {
+        document.write(`${this.name} ${this.year} ${this.value}`);
+      };
+    }
+
+    function User(uName, uSurname, uYear) {
+      this.name = uName;
+      this.year = uYear;
+      this.surname = uSurname;
+      this.GetInfoUser = function () {
+        document.write(`${this.name} ${this.year} ${this.surname}`);
+      };
+    }
+
+    function Book(bName, bYear, bAuthor) {
+      this.name = bName;
+      this.year = bYear;
+      this.author = bAuthor;
+      this.GetInfoBook = function () {
+        document.write(`${this.name} ${this.year} ${this.author}`);
+      };
+    }
+
+    function GetInfo() {
+      this.display = function (Car, User, Book) {
+        document.write(
+          `${User.name} читает книгу ${Book.name} про машину ${Car.name}`
+        );
+      };
+    }
+
+    var supra = new Car("Supra", 1994, "2.5");
+    var tim = new User("Tim", "Koooock", 1980);
+    var book = new Book("Minecraft", 2011, "Mojang");
+    var disp = new GetInfo();
+    disp.display(lada, tim, book);
+  </script>
+</html>
