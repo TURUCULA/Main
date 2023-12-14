@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+      }
+
+      class Car {
+        constructor(brand, year) {
+          this.brand = brand;
+          this.year = year;
+        }
+      }
+
+      class Book {
+        constructor(title, year) {
+          this.title = title;
+          this.year = year;
+        }
+      }
+
+      function createObjects() {
+        let people = [
+          new Person("Аня", 25),
+          new Person("Данил", 30),
+          new Person("Никита", 22),
+        ];
+
+        let cars = [
+          new Car("Лада", 2009),
+          new Car("Тойота", 2015),
+          new Car("БМВ", 2023),
+        ];
+
+        let books = [
+          new Book("Колобок", 1873),
+          new Book("Простоквашино", 1974),
+          new Book("Оно", 1986),
+        ];
+
+        console.log({ people, cars, books });
+      }
+
+      let objects = createObjects();
+    </script>
+  </body>
+</html>
