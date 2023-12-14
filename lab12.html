@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="a">"a"<br>
+        <input type="text" id="b">"b"<br>
+        <input type="text" id="c">"c"<br>
+        <input type="radio" name="+" id="sum">SUM<br>
+        <input type="radio" name="+" id="multi">MULTI<br>
+        <input type="radio" name="+" id="step">STEP<br>
+        <input type="button" value="Send" onclick="call()">
+    </form>
+    <script>
+        function call() {
+            var a = +document.getElementById("a").value;
+            var b = +document.getElementById("b").value;
+            var c = +document.getElementById("c").value;
+
+            if(document.getElementById("sum").checked) {
+                if(a + b > c) {
+                    document.write((a + b) % c);
+                } else {
+                    document.write(a + b);
+                }
+            } else if (document.getElementById("multi").checked) {
+                if(a * b > c){
+                    document.write((a * b) % c);
+                } else {
+                    document.write(a * b);
+                }
+            } else if (document.getElementById("step").checked) {
+                if(a ** b > c) {
+                    document.write((a ** b) % c);
+                } else {
+                    document.write(a ** b);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
